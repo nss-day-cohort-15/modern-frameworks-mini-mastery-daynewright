@@ -9,6 +9,7 @@ app.factory('FBDataFactory', function($q, $http){
         .success((objFromFirebase) => {
           Object.keys(objFromFirebase).forEach((key)=>{
             objFromFirebase[key].id = key;
+            objFromFirebase[key].price = parseFloat(objFromFirebase[key].price).toFixed(2);
             flowers.push(objFromFirebase[key]);
           });
           resolve(flowers);

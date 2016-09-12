@@ -1,3 +1,12 @@
-<div ng-repeat="flower in flowers">
-    {{flower}}
+
+
+<div class="container">
+  <div class="col-md-10 col-md-offset-1">
+    <div ng-repeat="flower in flowers">
+      <h1>{{flower.title}}</h1>
+      <h4>category: {{flower.category}}</h4>
+      <h4>price: ${{flower.price}}</h4>
+      <p>{{flower.description}}</p>
+    </div>
+  </div>
 </div>
