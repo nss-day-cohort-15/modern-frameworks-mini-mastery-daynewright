@@ -1,1 +1,4 @@
 flowers.json
+lib/bower_components
+lib/.sass-cache
+css/
