@@ -2,10 +2,12 @@
 
 <div class="container">
   <div class="col-md-10 col-md-offset-1">
-    <div ng-repeat="flower in flowers">
-      <h1>{{flower.title}}</h1>
-      <h4>category: {{flower.category}}</h4>
-      <h4>price: ${{flower.price}}</h4>
+    <div ng-repeat="flower in flowers | orderBy: category">
+      <hr ng-show="flower.headingCat">
+      <h1>{{flower.headingCat}}</h1>
+      <h2>{{flower.title}}</h2>
+      <h4>Category: {{flower.category}}</h4>
+      <h4>Price: ${{flower.price}}</h4>
       <p>{{flower.description}}</p>
     </div>
   </div>
